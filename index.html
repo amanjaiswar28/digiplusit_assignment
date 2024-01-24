@@ -68,7 +68,8 @@
 
             const newNode = document.createElement('div');
             newNode.className = 'node btn btn-primary';
-            newNode.textContent = nodeType;
+            const nodeValue = prompt('Enter node value:');
+            newNode.textContent = nodeType +" " + nodeValue || nodeType; 
 
             newNode.addEventListener('click', function () {
                 const childType = document.getElementById('node-type').value;
@@ -81,7 +82,10 @@
         function addNodeToParent(parentNode, nodeType) {
             const newNode = document.createElement('div');
             newNode.className = 'node btn btn-info';
-            newNode.textContent = nodeType;
+            // newNode.textContent = nodeType;
+            const nodeValue = prompt('Enter node value:');
+            newNode.textContent = nodeType +" " + nodeValue || nodeType; 
+
 
             newNode.addEventListener('click', function () {
                 const childType = document.getElementById('node-type').value;
